@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Food app</string>
+    <string name="view_menu">Xem Menu</string>
+
+
+    <!-- Navigation -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_search">Tìm kiếm</string>
+    <string name="nav_favorites">Yêu thích</string>
+    <string name="nav_profile">Cá nhân</string>
+
+    <!-- Common -->
+    <string name="search_hint">Tìm món ăn...</string>
+    <string name="empty_favorites">Chưa có món ăn yêu thích</string>
+    <string name="popular_foods">Món ăn phổ biến</string>
+    <string name="todo">TODO</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorites">Favorites</string>
+    <string name="profile">Profile</string>
+
+    <string name="food_image_desc">Ảnh món ăn</string>
+    <string name="delete_item_desc">Xóa món ăn</string>
+    <string name="decrease_quantity_desc">Giảm số lượng</string>
+    <string name="increase_quantity_desc">Tăng số lượng</string>
+    <string name="sample_food_name">Cua tươi ngon</string>
+    <string name="sample_price">$ 35</string>
+    <string name="sample_quantity">1</string>
+
+    <!-- Facebook Login -->
+    <string name="facebook_app_id">646186338477540</string>
+    <string name="facebook_client_token">a07d5b89acdf647d7d1aaa2d3a96a865</string>
+    <string name="fb_login_protocol_scheme">fb646186338477540</string>
+    <string name="view_food">Menu</string>
+    <string name="popular">Phổ biến</string>
+    <string name="notifications">Thông báo</string>
+    <string name="explore_your_favorite_food">Khám phá món ăn yêu thích của bạn</string>
+    <string name="ch_a_c_m_n_n_y_u_th_ch_n_o">Chưa có món ăn yêu thích nào</string>
+    <string name="t_ng_0">Tổng: 0₫</string>
+    <string name="t_n_m_n_n">Tên món ăn</string>
+    <string name="s_l_ng">Số lượng</string>
+    <string name="m_t_m_n_n">Mô tả món ăn</string>
+    <string name="gi_vd_5_99">Giá (VD: 5.99)</string>
+    <string name="xu_t">Đề xuất</string>
+    <string name="ch_n_nh_t_m_y">Chọn ảnh từ máy</string>
+    <string name="th_m_m_n_n">Thêm món ăn</string>
+    <string name="xem_danh_s_ch">Xem danh sách</string>
+    <string name="create_naccount">Tạo\nTài khoản</string>
+    <string name="name">Tên</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="ng_k">Đăng ký</string>
+    <string name="i_have_a_account">Tôi đã có tài khoản</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="back">Trở lại</string>
+    <string name="menu">Thực đơn</string>
+    <string name="welcome_nback">Chào mừng \nTrở lại</string>
+    <string name="dangnhap">Đăng nhập</string>
+    <string name="are_you_new_user_register">Chưa có tài khoản! Đăng kí</string>
+    <string name="enjoy_restaurant_quality_meals_at_home">Thưởng thức bữa ăn chất lượng nhà hàng tại nhà</string>
+    <string name="tieptuc">Tiếp tục</string>
+    <string name="design_by_neatroots">Design By NeatRoots</string>
+    <string name="s_l_ng_1">Số lượng: 1</string>
+    <string name="tenmonan">Tên món ăn</string>
+    <string name="gia">Giá</string>
+    <string name="th_m">Thêm</string>
+    <string name="tenthucuong">Tên Thức Uống</string>
+    <string name="motathucuong">Mô tả thức uống</string>
+    <string name="thanhtoan">Thanh toán</string>
+    <string name="default_web_client_id">298737128807-ofl7s3kcupb7f0tahl5ge1lro3e982l9.apps.googleusercontent.com</string>
+    <string name="t_n_s_n_ph_m">Tên sản phẩm</string>
+    <string name="gi">Giá</string>
+    <string name="s_luong">Số lượng</string>
+    <string name="m_t">Mô tả</string>
+    <string name="n">Đồ ăn</string>
+    <string name="th_c_u_ng">Thức uống</string>
+    <string name="ph_bi_n">Phổ biến?</string>
+    <string name="ch_n_nh">Chọn ảnh</string>
+    <string name="th_m_s_n_ph_m">Thêm sản phẩm</string>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Profile Header -->
+            <TextView
+                android:id="@+id/tvProfileHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thông tin cá nhân"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <include
+                android:id="@+id/layoutName"
+                layout="@layout/item_profile_field"
+                android:tag="Họ tên"/>
+
+            <include
+                android:id="@+id/layoutAddress"
+                layout="@layout/item_profile_field"
+                android:tag="Địa chỉ"/>
+
+            <include
+                android:id="@+id/layoutEmail"
+                layout="@layout/item_profile_field"
+                android:tag="Email"/>
+
+            <include
+                android:id="@+id/layoutPhone"
+                layout="@layout/item_profile_field"
+                android:tag="Số điện thoại"/>
+
+            <include
+                android:id="@+id/layoutPassword"
+                layout="@layout/item_profile_field"
+                android:tag="Mật khẩu"/>
+
+            <!-- Update Info Button -->
+            <TextView
+                android:id="@+id/btnUpdateProfile"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:text="Cập nhật thông tin"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:background="@drawable/bg_proceed_ripple"
+                android:elevation="8dp"/>
+
+            <!-- Change Password Button -->
+            <TextView
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:text="Đổi mật khẩu"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:background="@drawable/bg_proceed_ripple"
+                android:elevation="8dp"/>
+
+            <!-- Logout Button -->
+            <TextView
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:text="Đăng xuất"
+                android:textColor="#24C77D"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:background="@drawable/bg_proceed_ripple"
+                android:elevation="12dp"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Họ tên -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_input"
+        android:paddingHorizontal="12dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_person"
+            app:tint="@color/md_theme_light_primary" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Họ tên"
+            android:inputType="textPersonName"
+            android:background="@android:color/transparent"
+            android:paddingStart="12dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Địa chỉ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_input"
+        android:paddingHorizontal="12dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_location"
+            app:tint="@color/md_theme_light_primary" />
+
+        <EditText
+            android:id="@+id/edtAddress"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Địa chỉ"
+            android:inputType="phone"
+            android:background="@android:color/transparent"
+            android:paddingStart="12dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Số điện thoại -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_input"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_phone"
+            app:tint="@color/md_theme_light_primary" />
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Số điện thoại"
+            android:inputType="phone"
+            android:background="@android:color/transparent"
+            android:paddingStart="12dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</LinearLayout>

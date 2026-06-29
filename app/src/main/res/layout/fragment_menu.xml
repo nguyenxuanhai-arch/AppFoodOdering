@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Thanh tìm kiếm -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="Tìm món ăn..."
+                android:inputType="text"
+                android:background="@drawable/bg_input_rounded"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@android:color/black" />
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_search"
+                android:contentDescription="Tìm kiếm"
+                app:tint="@color/md_theme_light_primary" />
+        </LinearLayout>
+
+        <!-- Bộ lọc theo loại -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <ToggleButton
+                android:id="@+id/btnFilterFood"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOn="🍛 Food"
+                android:textOff="🍛 Food"
+                android:background="@drawable/bg_toggle_filter"
+                android:textColor="@android:color/white" />
+
+            <ToggleButton
+                android:id="@+id/btnFilterDrink"
+                android:layout_width="9dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_toggle_filter"
+                android:textColor="@android:color/white"
+                android:textOff="🥤 Drink"
+                android:textOn="🥤 Drink" />
+        </LinearLayout>
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:id="@+id/tvMenuTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thực đơn"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Danh sách món ăn -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMenuFood"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+        <!-- ProgressBar loading -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:indeterminateTint="?attr/colorPrimary" />
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

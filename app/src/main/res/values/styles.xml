@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/styles.xml -->
+<resources>
+    <!-- Bottom Navigation Text Styles -->
+    <style name="BottomNavTextActive">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="BottomNavTextInactive">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="AppCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/corner_radius_medium</item>
+        <item name="cardElevation">@dimen/elevation_small</item>
+        <item name="cardBackgroundColor">?attr/colorSurfaceContainer</item>
+        <item name="contentPadding">@dimen/padding_medium</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="AppButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">@dimen/corner_radius_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="AppButton.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">@dimen/corner_radius_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="AppTextHeadline">
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="AppTextBody">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="AppTextCaption">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="view_menu">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:fontFamily">@font/lato</item> <!-- Hoặc bỏ nếu không dùng -->
+    </style>
+
+
+</resources>

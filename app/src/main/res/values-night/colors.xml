@@ -1,0 +1,14 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="text_color_selected">#00C897</color>
+    <color name="text_color_unselected">#AAAAAA</color>
+
+    <color name="primary">#00C897</color>
+    <color name="primary_dark">#00B388</color>
+    <color name="accent">#FF4081</color>
+
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FF000000</color>
+    <color name="background">#121212</color>
+
+    <color name="md_theme_light_primary">#81C784</color>
+</resources>

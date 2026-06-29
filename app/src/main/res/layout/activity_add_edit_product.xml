@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitleDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgBackAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:src="@drawable/ic_back" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etProductName"
+            android:hint="@string/t_n_s_n_ph_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etProductPrice"
+            android:hint="@string/gi"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etProductQuantity"
+            android:hint="@string/s_luong"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etProductDescription"
+            android:hint="@string/m_t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgType"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbFood"
+                android:text="@string/n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:buttonTint="@color/md_theme_light_primary"/>
+
+            <RadioButton
+                android:id="@+id/rbDrink"
+                android:text="@string/th_c_u_ng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:textSize="15sp"
+                android:buttonTint="@color/md_theme_light_primary"/>
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/btnSwitch"
+            android:text="@string/ph_bi_n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textSize="15sp"
+            android:textColor="#333"/>
+
+        <Button
+            android:id="@+id/btnPickImage"
+            android:text="@string/ch_n_nh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/md_theme_light_primary"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_image_preview"/>
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:text="@string/th_m_s_n_ph_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/md_theme_light_primary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</ScrollView>

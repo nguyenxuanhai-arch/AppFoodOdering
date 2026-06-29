@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:clipToPadding="false">
+
+        <!-- Tên món ăn -->
+        <EditText
+            android:id="@+id/etProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/t_n_m_n_n"
+            android:inputType="textCapWords"
+            android:background="@drawable/edittext_background"
+            android:textColor="?android:textColorPrimary"
+            android:textColorHint="?android:textColorHint"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Số lượng -->
+        <EditText
+            android:id="@+id/etProductQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/s_l_ng"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:textColor="?android:textColorPrimary"
+            android:textColorHint="?android:textColorHint" />
+
+        <!-- Mô tả -->
+        <EditText
+            android:id="@+id/etProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/m_t_m_n_n"
+            android:inputType="textCapWords"
+            android:padding="12dp"
+            android:textColor="?android:textColorPrimary"
+            android:textColorHint="?android:textColorHint" />
+
+        <!-- Giá -->
+        <EditText
+            android:id="@+id/etProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/gi_vd_5_99"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:textColor="?android:textColorPrimary"
+            android:textColorHint="?android:textColorHint"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Chọn loại -->
+        <RadioGroup
+            android:id="@+id/rgType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/rbFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbDrink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drink"
+                android:layout_marginStart="24dp" />
+        </RadioGroup>
+
+        <!-- Đánh dấu nổi bật -->
+        <Switch
+            android:id="@+id/btnSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/xu_t" />
+
+        <!-- Chọn ảnh -->
+        <Button
+            android:id="@+id/btnPickImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ch_n_nh_t_m_y"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Xem trước ảnh -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/image_border"
+            android:visibility="gone" />
+
+        <!-- Thêm món -->
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/th_m_m_n_n"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <!-- Xem danh sách -->
+        <Button
+            android:id="@+id/btnViewProductList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/xem_danh_s_ch" />
+
+    </LinearLayout>
+</ScrollView>

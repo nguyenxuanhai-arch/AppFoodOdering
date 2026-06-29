@@ -1,0 +1,86 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "9de96a21-b89f-4fee-b921-31d5d042b02c",
+      "name": "Trả QR về client",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        540,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "const body = items[0].json.body ?? {};\n\nconst userId = body.userId;\nconst orderId = body.orderId;\nconst note = body.note || \"Thanh toán\";\n\nconst rawAmount = body.amount;\nconst amount = typeof rawAmount === \"number\" ? rawAmount : parseInt(rawAmount, 10);\n\nif (!rawAmount || isNaN(amount) || amount <= 0) {\n  throw new Error(`❌ Amount không hợp lệ từ client: ${JSON.stringify(body)}`);\n}\n\n// Cấu hình tài khoản ngân hàng\nconst bankId = \"970422\";\nconst accountNumber = \"0775472894\";\nconst accountName = \"Nguyễn Xuân Hải\";\n\n// Tính thời gian hết hạn: 15 phút kể từ hiện tại\nconst expiredAt = Math.floor(Date.now() / 1000) + 15 * 60;\n\n// Tạo URL ảnh QR từ VietQR\nconst qrUrl = `https://img.vietqr.io/image/${bankId}-${accountNumber}-qr_only.png?amount=${amount}&addInfo=${encodeURIComponent(note)}&accountName=${encodeURIComponent(accountName)}`;\n\nreturn [{\n  json: {\n    userId,\n    orderId,\n    amount,\n    note,\n    qrImageUrl: qrUrl,\n    expiredAt\n  }\n}];\n"
+      },
+      "id": "a65b4e2b-e233-4e61-8a34-ba465a27163f",
+      "name": "Tạo VietQR",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        300,
+        -80
+      ],
+      "alwaysOutputData": false,
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "api/vietqr/payment",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "d57898b1-a0ca-4abc-a857-c8c6a6102d05",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        40,
+        -80
+      ],
+      "webhookId": "9e1182df-c001-4a5b-bcaa-50e75ad7254e"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Tạo VietQR": {
+      "main": [
+        [
+          {
+            "node": "Trả QR về client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Tạo VietQR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "c2231d06-8d15-41c1-9838-d6aab2c80345",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2b0139c3e707416334723b21d43e3b5b69275cdc174074be187b7b32dead40ae"
+  },
+  "id": "gMiisjttrzKhoLf7",
+  "tags": []
+}

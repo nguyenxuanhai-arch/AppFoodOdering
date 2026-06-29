@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Android_lab" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:statusBarColor">#1A1A1A</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">#FAFAFA</item>
+
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/text_color_unselected</item>
+
+        <item name="materialCardViewStyle">@style/Widget.App.CardView.Light</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigation.Light</item>
+    </style>
+
+    <style name="Widget.App.CardView.Light" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="contentPadding">0dp</item>
+        <item name="cardBackgroundColor">#FFFFFF</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigation.Light" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@drawable/button_background_dark</item>
+        <item name="itemIconTint">@color/bottom_nav_colors</item>
+        <item name="itemTextColor">@color/bottom_nav_colors</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <style name="Theme.Android_lab" parent="Base.Theme.Android_lab" />
+</resources>
